@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html>
-
- <head>
-  <title>Practice_1</title>
-  <meta charset="UTF-8"/>
-  <link rel="stylesheet" href="" type="text/css"/>
- </head>
-
 <body>
 
 <form action="/action_page.php" method="post">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" value="John"><br>
-  <input type="submit" value="Post">
-</form>
+  <label for="lname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="Doe"><br>
+  <input type="submit" value="Get">
+</form>  
 
 <form action="/action_page.php" method="get">
   <label for="lname">Last name:</label><br>
@@ -23,14 +16,39 @@
  
 <form action="/action_page.php" id="form1" method="get">
   <legend>Test Legend</legend>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="Doe"><br>
-  <input type="submit" value="Get"><br><br>
+  <label for="lname">Name:</label><br>
+  <input type="text" id="lname" name="lname" size="25" pattern="[A-Za-z]{1,9}" 
+  autofocus required title="Please enter less than 9"><br>
+  <label for="lname">Surname:</label><br>
+  <input type="text" id="name" name="fname" size="25" pattern="[A-Za-z]{1,9}" 
+  autofocus required title="Please enter less than 9"><br>
+  <input type="submit" value="Submit"><br><br>
 </form> 
 
-<iframe width="420" height="315"
-src="https://www.youtube.com/embed/sampleYoutube?autoplay=1&mute=1">
-</iframe> 
+<line 1>
+
+<button onclick="getLocation()">Get location</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ALja3wAdQsM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </body>
 </html>
