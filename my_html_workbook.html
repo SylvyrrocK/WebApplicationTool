@@ -1,22 +1,36 @@
 <!DOCTYPE html>
 <html>
+
  <head>
-  <title>Untitled</title>
+  <title>Practice_1</title>
   <meta charset="UTF-8"/>
   <link rel="stylesheet" href="" type="text/css"/>
  </head>
-  <body>
-  <form> 
-<label for="fname">First name:</label><br> 
-<input type="text" id="fname" name="fname"><br> 
-<label for="lname">Last name:</label><br> 
-<input type="text" id="lname" name="lname"> 
+
+<body>
+
+<form action="/action_page.php" method="post">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <input type="submit" value="Post">
 </form>
 
-<form action="/action_page.php"  
-method="get"> 
-<form action="/action_page.php"  
-method="post">
+<form action="/action_page.php" method="get">
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br>
+  <input type="submit" value="Get">
+</form> 
  
-  </body>
- </html>
+<form action="/action_page.php" id="form1" method="get">
+  <legend>Test Legend</legend>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br>
+  <input type="submit" value="Get"><br><br>
+</form> 
+
+<iframe width="420" height="315"
+src="https://www.youtube.com/embed/sampleYoutube?autoplay=1&mute=1">
+</iframe> 
+
+</body>
+</html>
