@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-#div1 {
-  width: 402px;
-  height: 302px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
-}
-</style>
+<link rel="stylesheet" href="my_style.css">
 </head>
 <body>
+<form action="/action_page.php" method="get">
+  <label for="fname">Email:</label>
+  <input type="checkbox" id="fname" name="fname"><br><br>
+  <label for="lname">Subscribe:</label>
+  <input type="checkbox" id="lname" name="lname"><br><br>
+  <button type="submit" class="button" value="Email">Email</button>
+  <button type="Submit" class="button" value="Subscribe">Subscribe</button>
+</form>
 
+<form>
+         <br>
+		 <img id = "myImage" src = "arrow.jpeg" width="400" height="300"/>
+         <p>Click button below to move the image to right</p>
+         <input type = "button" class="button" value = "Click Me" onclick = "moveRight();" />
+</form>  
+<br>
+	  
 <form action="/action_page.php" method="post">
   <label for="lname">First name:</label><br>
   <input type="text" id="fname" name="fname" value="Doe"><br>
@@ -78,7 +87,23 @@ function drop(ev) {
 
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
-<img id="drag1" src="d_1x.png" draggable="true" ondragstart="drag(event)" width="400" height="300">
-
+<img id="drag1" src="d_1x.png" draggable="true" ondragstart="drag(event)" width="400" height="300">   
+	  
+ <script type = "text/javascript">
+         <!--
+            var imgObj = null;
+            
+            function init() {
+               imgObj = document.getElementById('myImage');
+               imgObj.style.position= 'relative'; 
+               imgObj.style.left = '0px'; 
+            }
+            function moveRight() {
+               imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+            }
+            
+            window.onload = init;
+         //-->
+      </script>
 </body>
 </html>

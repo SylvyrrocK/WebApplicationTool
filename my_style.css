@@ -1,0 +1,20 @@
+#div1 {
+  width: 402px;
+  height: 302px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+.button {
+    position: relative;
+    top:50%;
+    background-color:#0a0a23;
+    color: #fff;
+    border:none;
+    border-radius:10px;
+  }
+
+.button:hover {
+      background-color:#002ead;
+      transition: 0.7s;
+  }
