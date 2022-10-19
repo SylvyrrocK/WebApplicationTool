@@ -2,8 +2,65 @@
 <html>
 <head>
 <link rel="stylesheet" href="my_style.css">
+<script src="jquery-3.6.1.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#box").animate({height: "300px"});
+  });
+  $("#btn2").click(function(){
+    $("#box").animate({height: "100px"});
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $("p").click(function(){
+    alert("The paragraph was clicked.");
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $("p").fadeOut();
+  });
+  $(".btn2").click(function(){
+    $("p").fadeIn();
+  });
+});
+</script>
+<script>
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $(".box2").slideUp();
+  });
+  $(".btn2").click(function(){
+    $(".box2").slideDown();
+  });
+});
+</script>
 </head>
 <body>
+
+<div id=box2><p>This is a paragraph.</p></div>
+
+<button class="btn1">Slide up</button>
+<button class="btn2">Slide down</button>
+
+<p>This is a paragraph.</p>
+
+<button class="btn1">Fade out</button>
+<button class="btn2">Fade in</button>
+
+<button id="btn1">Animate height</button>
+<button id="btn2">Reset height</button>
+
+<div id="box" style="background:#98bf21;height:100px;width:100px;margin:6px;"></div>
+
+<p>Click on this paragraph.</p>
+
+
 <form action="/action_page.php" method="get">
   <label for="fname">Email:</label>
   <input type="checkbox" id="fname" name="fname"><br><br>
