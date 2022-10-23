@@ -1,8 +1,8 @@
 #div1 {
-  width: 402px;
-  height: 302px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
+    width: 402px;
+   height: 302px;
+   padding: 10px;
+   border: 1px solid #aaaaaa;
 }
 
 .button {
@@ -15,6 +15,14 @@
   }
 
 .button:hover {
-      background-color:#002ead;
-      transition: 0.7s;
+    background-color:#002ead;
+    transition: 0.7s;
   }
+
+.center-screen {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    text-align: center;
+    min-height: 100vh;
+ }
